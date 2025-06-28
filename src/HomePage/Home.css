@@ -1,0 +1,107 @@
+/*Carousel logic*/
+body {
+	padding: 0px;
+	margin: 0;
+}
+
+.carousel-style {
+    padding-top: 2%;
+}
+
+@layer demo {
+	.carousel {
+		--items: 3;
+		--carousel-duration: 40s;
+		@media (width > 600px) {
+			--carousel-duration: 30s;
+		}
+		--carousel-width: 100vw; /* note - it will "break" if it gets too wide and there aren't enough items */
+        --carousel-height: 80vw;
+		--carousel-item-width: 50vw;
+		--carousel-item-height: 40vh;
+		--carousel-item-gap: 3rem;
+
+		--clr-cta: rgb(0, 132, 209);
+
+		position: relative;
+		width: var(--carousel-width);
+		height: var(--carousel-height);
+		overflow: clip;
+
+		/* fade out on sides */
+        mask-image: linear-gradient(
+			to right,
+			transparent,
+			black 10% 90%,
+			transparent
+		);
+		
+
+		&[reverse] > article {
+			animation-direction: reverse;
+		}
+		
+	}
+	.carousel > article {
+		position: absolute;
+		top: 0;
+		left: calc(100% + var(--carousel-item-gap));
+		width: var(--carousel-item-width);
+		height: var(--carousel-item-height);
+		display: grid;
+		grid-template-rows: 200px auto 1fr auto;
+		gap: 3rem;
+		border: 1px solid light-dark(rgba(0 0 0 / 0.25), rgba(255 255 255 / 0.15));
+
+		padding-block-end: 1rem;
+		border-radius: 10px;
+		background: transparent;
+		color: light-dark(rgb(49, 65, 88), white);
+
+		/* animation */
+		will-change: transform;
+		animation-name: marquee;
+		animation-duration: var(--carousel-duration);
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+		animation-delay: calc(
+			var(--carousel-duration) / var(--items) * 1 * var(--i) * -1
+		);
+		&:nth-child(1) {
+			--i: 0;
+		}
+		&:nth-child(2) {
+			--i: 1;
+		}
+		&:nth-child(3) {
+			--i: 2;
+		}
+		&:nth-child(4) {
+			--i: 3;
+		}
+		&:nth-child(5) {
+			--i: 4;
+		}
+		&:nth-child(6) {
+			--i: 5;
+		}
+	}
+	.carousel img {
+		width: 100vh;
+		height: 45vh;
+		object-fit: cover;
+		border-radius: 10px 10px 0 0;
+	}
+
+	@keyframes marquee {
+		100% {
+			transform: translateX(
+				calc(
+					(var(--items) * (var(--carousel-item-width) + var(--carousel-item-gap))) *
+						-1
+				)
+			);
+		}
+	}
+}
+/*End carousel styling logic */

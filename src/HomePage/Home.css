@@ -1,12 +1,16 @@
-/*Carousel logic*/
 body {
 	padding: 0px;
-	margin: 0;
+	margin: 0px;
+	background-color: rgb(255, 255, 255);
 }
 
-.carousel-style {
-    padding-top: 2%;
+.center {
+	display: flex;
+	justify-self: center;
+	align-self: center;
 }
+
+/*Carousel logic*/
 
 @layer demo {
 	.carousel {
@@ -16,9 +20,9 @@ body {
 			--carousel-duration: 30s;
 		}
 		--carousel-width: 100vw; /* note - it will "break" if it gets too wide and there aren't enough items */
-        --carousel-height: 80vw;
-		--carousel-item-width: 50vw;
-		--carousel-item-height: 40vh;
+        --carousel-height: 70vh;
+		--carousel-item-width: 100vw;
+		--carousel-item-height: 70vh;
 		--carousel-item-gap: 3rem;
 
 		--clr-cta: rgb(0, 132, 209);
@@ -86,9 +90,10 @@ body {
 			--i: 5;
 		}
 	}
+
 	.carousel img {
-		width: 100vh;
-		height: 45vh;
+		width: 100%;
+		height: 90vh;
 		object-fit: cover;
 		border-radius: 10px 10px 0 0;
 	}
@@ -105,3 +110,108 @@ body {
 	}
 }
 /*End carousel styling logic */
+
+.carousel-style {
+	position: relative;
+	padding-bottom: 0.5%;
+	padding-top: 0.5%;
+}
+
+/* Start of socials */
+.socials {
+	justify-self: center;
+	width: 40%;
+	background-color: red;
+}
+
+.social-logos {
+	height: 50%;
+	padding: 20px;
+}
+
+.social-logos:hover {
+	animation: shake 0.5s;
+	animation-iteration-count: infinite;
+}
+	  
+@keyframes shake {
+	0% { transform: translate(1px, 1px) rotate(0deg); }
+	10% { transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { transform: translate(-3px, 0px) rotate(1deg); }
+	30% { transform: translate(3px, 2px) rotate(0deg); }
+	40% { transform: translate(1px, -1px) rotate(1deg); }
+	50% { transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { transform: translate(-3px, 1px) rotate(0deg); }
+	70% { transform: translate(3px, 1px) rotate(-1deg); }
+	80% { transform: translate(-1px, -1px) rotate(1deg); }
+	90% { transform: translate(1px, 2px) rotate(0deg); }
+	100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* End of socials */
+
+/* Start of about sase */
+
+.about-sase {
+	display: flex;
+	align-items: center;
+}
+
+.sase-merch-video {
+	width: 50%;
+	padding-right: 2%;
+	display: flex;
+	justify-content: center;
+}
+
+.sase-merch-video > video {
+	overflow: hidden;
+	padding-left: 10%;
+	object-fit: contain;
+}
+
+.sase-mission {
+	height: 50%;
+	border-radius: 20px;
+}
+
+/* ENd of about sase */
+
+.annoucements {
+	display: flex;
+}
+
+.news {
+	display: flex;
+	justify-content: center;
+	width: 60%;
+}
+
+.sase-hype-vid {
+	display: flex;
+	justify-content: center;
+	width: 50%;
+}
+
+.sase-hype-vid > video {
+	object-fit: fill;
+	margin-right: 50px;
+	width: 100%;
+}
+
+.text-box {
+	justify-content: center;
+	align-self: center;
+	width: 35%;
+	height: 50%;
+	background-color: blue;
+	margin: 5px;
+	border-radius: 10px;
+}
+
+.text-box > h1 {
+	justify-self: center;
+	background-color: white;
+	border-radius: 20px;
+}
+

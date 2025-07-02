@@ -1,0 +1,31 @@
+body {
+	padding: 0px;
+	margin: 0;
+	background-color: rgb(82, 82, 89);
+}
+
+section {
+	display: flex;
+}
+
+.img-section {
+	width: 50%;
+	background-color: red;
+	display: inline-flex;
+}
+
+.member-image-section > img {
+	width: 35%;
+	padding: 10px;
+}
+
+.info-section {
+	display: none;
+	background-color: blue;
+	position: relative;
+}
+
+.img-section:hover + .info-section {
+	display: flex;
+}
+

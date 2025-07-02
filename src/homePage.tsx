@@ -1,7 +1,6 @@
 import { createRoot } from 'react-dom/client'
 import Header from './UniversalComponents/Header'
 import Carousel from './HomePage/ImageCarousel.tsx'
-import Slideshow from './HomePage/Slideshow.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <>

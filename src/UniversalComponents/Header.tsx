@@ -1,4 +1,4 @@
-import './Header.css'
+import './Universal.css'
 
 export default function Header() {
     return (
@@ -9,7 +9,7 @@ export default function Header() {
                 </a> 
             </div>
             <div className="navbar-button">
-                <a href="./exec.html"><button><b>2025 Executive Board</b></button></a>
+                <a href="./exec.html"><button><b>2026 Executive Board</b></button></a>
                 <a href="./index.html"><button><b>Home</b></button></a>
                 <a href="./sponsor.html"><button><b>Sponsors</b></button></a>
             </div>

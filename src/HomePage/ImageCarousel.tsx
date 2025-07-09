@@ -12,7 +12,7 @@ export default function Carousel() {
                             </article>
 
                             <article>
-                                <img src="/src/Images/gbmFour.jpg" alt="sase-gbm4" />
+                                <img src="../Images/gbmFour.jpg" alt="sase-gbm4" />
                             </article>
 
                             <article>

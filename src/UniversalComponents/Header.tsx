@@ -1,5 +1,5 @@
 import './Universal.css'
-import Logo from './src/Images/ou-sase-logo.png'
+import Logo from '/src/Images/ou-sase-logo.png'
 
 export default function Header() {
     return (

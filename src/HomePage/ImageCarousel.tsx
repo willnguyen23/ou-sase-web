@@ -1,10 +1,10 @@
 import './Home.css'
-import FinalGBM from './src/Images/finalGBM2025.jpg'
-import FourthGBM from './src/Images/gbmFour.jpg'
-import Natcon from './src/Images/saseNatcon2025.jpg'
-import Volunteer from './src/Images/saseVolunteer.jpg'
-import LNY from './src/Images/saseLNY.jpg'
-import Halloween from './src/Images/saseHalloween.jpg'
+import FinalGBM from '/src/Images/finalGBM2025.jpg'
+import FourthGBM from '/src/Images/gbmFour.jpg'
+import Natcon from '/src/Images/saseNatcon2025.jpg'
+import Volunteer from '/src/Images/saseVolunteer.jpg'
+import LNY from '/src/Images/saseLNY.jpg'
+import Halloween from '/src/Images/saseHalloween.jpg'
 
 export default function Carousel() {
     return (

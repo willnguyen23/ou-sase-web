@@ -1,7 +1,7 @@
 import '/src/UniversalComponents/Universal.css'
-import Card from './src/Images/carrdLogo.png'
-import Insta from './src/Images/instagramLogo.png'
-import Discord from './src/Images/discordLogo.png'
+import Card from '/src/Images/carrdLogo.png'
+import Insta from '/src/Images/instagramLogo.png'
+import Discord from '/src/Images/discordLogo.png'
 
 export default function Footer() {
     return (

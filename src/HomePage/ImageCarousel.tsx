@@ -14,7 +14,7 @@ export default function Carousel() {
                     <div>
                         <div className="carousel">
                             <article>
-                                <img src={FinalGBM} alt="final-gbm" />
+                                <img src="dist/assets/finalGBM2025-B0LHnBKv.jpg" alt="final-gbm" />
                             </article>
 
                             <article>

@@ -16,7 +16,7 @@ createRoot(document.getElementById('root')!).render(
         <div className="sase-mission">
             <h1>What is SASE's mission?</h1>
             <p>SASE is dedicated to the advancement of Asian heritage scientists and engineers in education and employment so that they can achieve their full career potential.</p> <br />
-            <p>We do this by...</p>
+            <p>We accomplish this through...</p>
             <ul>
                 <li>Career Growth</li>
                 <li>Mentorship and Community</li>

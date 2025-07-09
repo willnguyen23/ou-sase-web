@@ -1,4 +1,10 @@
 import './Home.css'
+import FinalGBM from './src/Images/finalGBM2025.jpg'
+import FourthGBM from './src/Images/gbmFour.jpg'
+import Natcon from './src/Images/saseNatcon2025.jpg'
+import Volunteer from './src/Images/saseVolunteer.jpg'
+import LNY from './src/Images/saseLNY.jpg'
+import Halloween from './src/Images/saseHalloween.jpg'
 
 export default function Carousel() {
     return (
@@ -8,27 +14,27 @@ export default function Carousel() {
                     <div>
                         <div className="carousel">
                             <article>
-                                <img src="/src/Images/finalGBM2025.jpg" alt="final-gbm" />
+                                <img src={FinalGBM} alt="final-gbm" />
                             </article>
 
                             <article>
-                                <img src="/src/Images/gbmFour.JPG" alt="sase-gbm4" />
+                                <img src={FourthGBM} alt="sase-gbm4" />
                             </article>
 
                             <article>
-                                <img src="/src/Images/saseNatcon2025.jpg" alt="sase-natcon25" />
+                                <img src={Natcon} alt="sase-natcon25" />
                             </article>
 
                             <article>
-                                <img src="/src/Images/saseVolunteer.jpg" alt="saseunteer" />
+                                <img src={Volunteer} alt="saseunteer" />
                             </article>
 
                             <article>
-                                <img src="/src/Images/saseLNY.JPG" alt="sase-lny" />
+                                <img src={LNY} alt="sase-lny" />
                             </article>
 
                             <article>
-                                <img src="/src/Images/saseHalloween.JPG" alt="saseoween" />
+                                <img src={Halloween} alt="saseoween" />
                             </article>
                         </div>
                     </div>

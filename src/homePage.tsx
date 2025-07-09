@@ -2,6 +2,7 @@ import ReactDom from 'react-dom/client'
 import Header from './UniversalComponents/Header'
 import Footer from './UniversalComponents/Footer'
 import Carousel from './HomePage/ImageCarousel.tsx'
+import SaseMerch from './src/Images/sase-vid.mp4'
 
 ReactDom.createRoot(document.getElementById('root')!).render(
   <>
@@ -11,7 +12,7 @@ ReactDom.createRoot(document.getElementById('root')!).render(
     </section>
     <section className="about-sase">
         <div className="sase-merch-video">
-            <video src="src/Images/sase-vid.mp4" loop autoPlay muted/>
+            <video src={SaseMerch} loop autoPlay muted/>
         </div>
         <div className="sase-mission">
             <h1>What is SASE's mission?</h1>

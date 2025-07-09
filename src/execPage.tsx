@@ -1,10 +1,10 @@
-import { createRoot } from 'react-dom/client'
+import ReactDom from 'react-dom/client'
 import Header from './UniversalComponents/Header'
 import Footer from './UniversalComponents/Footer'
 import MemberInfo from './ExecPage/MemberInfo'
 
 
-createRoot(document.getElementById('root')!).render(
+ReactDom.createRoot(document.getElementById('root')!).render(
   <>
     <Header />
     

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import '/src/ExecPage/Exec.css'
+import daniel from './src/Images/daniel.png'
 
 interface MemberImages {
     id: string;
@@ -14,7 +15,7 @@ const memberImages: MemberImages[] = [
         id: "daniel",
         num: 1,
         alt: "daniel park - president",
-        src: "/src/Images/daniel.png",
+        src: "daniel",
         info: ["Daniel Park", "President", "Chemical Engineering", "Junior"]
     }, 
     {

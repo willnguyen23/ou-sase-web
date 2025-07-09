@@ -125,16 +125,121 @@ const memberImages: MemberImages[] = [
 ]
 
 export default function Members() { 
+    // Utility to chunk an array into groups of a given size
+    const chunkArray = <T,>(arr: T[], size: number): T[][] => {
+        const chunks: T[][] = [];
+
+        for (let i = 0; i < arr.length; i += size) {
+            chunks.push(arr.slice(i, i + size));
+        }
+
+        return chunks;
+    };
+  
+    
+        const imageGroups = chunkArray(memberImages, 4);
+        const [activeGroupIndex, setActiveGroupIndex] = useState<number | null>(null);
+        const [activeMember, setActiveMember] = useState<MemberImages | null>(null);
+    
+        const handleClick = (groupIndex: number, member: MemberImages) => {
+            if (activeGroupIndex === groupIndex && activeMember?.id === member.id) {
+                // If the same image is clicked again, close it
+                setActiveGroupIndex(null);
+                setActiveMember(null);
+            } 
+            else {
+                setActiveGroupIndex(groupIndex);
+                setActiveMember(member);
+            }
+        };
+    
+        return (
+            <div className = "img-section">
+                {imageGroups.map((group, groupIndex) => (
+                    <div key={groupIndex} className = "img-row">
+                        <div style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(4, 1fr)',
+                            gap: '15px',
+                        }}>
+                        {group.map(member => (
+                            <img
+                                key={member.id}
+                                src={member.src}
+                                alt={member.alt}
+                                style={{ width: '100%', cursor: 'pointer', borderRadius: '8px' }}
+                                onMouseOver={() => handleClick(groupIndex, member)}
+                            />
+                        ))}
+                        </div>
+        
+                        {activeGroupIndex === groupIndex && activeMember && (
+                            <div style={{
+                                marginTop: '15px',
+                                padding: '20px',
+                                backgroundColor: '#f9f9f9',
+                                border: '1px solid #ddd',
+                                borderRadius: '6px',
+                            }} className = "info-container">
+                                <h1>{activeMember.info[0]}</h1>
+                                <p><strong>Position:</strong> {activeMember.info[1]}</p>
+                                <p><strong>Major:</strong> {activeMember.info[2]}</p>
+                                <p><strong>Year:</strong> {activeMember.info[3]}</p>
+                            </div>
+                        )}
+                    </div>
+                ))}
+            </div>
+        );
+
+
+{/*
+    const [openId, setOpenId] = useState<string | null>(null);
+
+    const handleToggle = (id: string) => {
+        setOpenId(prev => (prev === id ? null : id));
+    };
+
+    const chunkArray = <T, >(arr: T[], size: number): T[][] => {
+        const chunks: T[][] = [];
+
+        for (let i = 0; i < arr.length; i += size) {
+            chunks.push(arr.slice(i, i+size));
+        }
+
+        return chunks;
+    }
+
+    const imageGroups = chunkArray(memberImages, 4);
+
+
+
 
     return (
         <>
             <div className = "img-section">
-                {memberImages.map((image) => (
-                    <div className = "img-indiv">
-                        <img src={image.src} />
+                {imageGroups.map((group, groupIndex) => (
+                    <div className = "img-row" key = {groupIndex}>
+                        {group.map(image => (
+                            <div className = "img-indiv">
+                                <img 
+                                    src={image.src} 
+                                    alt={image.alt}
+                                    onMouseOver={() => handleToggle(image.id)}
+                                />
+                                {openId === image.id && (
+                                    <div className = "info-container">
+                                        <h1>
+                                            {image.info[0]}
+                                        </h1>
+                                    </div>
+                                )}
+                            </div>
+                        ))}
                     </div>
                 ))}
             </div>
         </>
     )
+*/}
 }

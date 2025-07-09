@@ -4,8 +4,9 @@ import Footer from './UniversalComponents/Footer'
 import Carousel from './HomePage/ImageCarousel.tsx'
 import SaseMerch from './Images/sase-vid.mp4'
 
-ReactDom.createRoot(document.getElementById('root')!).render(
-  <>
+export default function Home() {
+    return (
+        <>
     <Header />
     <section className="carousel-style">
         <Carousel />
@@ -47,4 +48,10 @@ ReactDom.createRoot(document.getElementById('root')!).render(
     </section>
     <Footer />
   </>
-)
+
+
+
+    )
+    
+}
+

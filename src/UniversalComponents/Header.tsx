@@ -5,7 +5,7 @@ export default function Header() {
         <header className="header-container">
             <div className="logo">
                 <a href="https://www.saseconnect.org/" target="_blank">
-                    <img src="./src/Images/ou-sase-logo.png" className="ou-sase-logo" alt="ou sase logo"/>
+                    <img src="https://github.com/willnguyen23/ou-sase-web/blob/main/src/Images/ou-sase-logo.png" className="ou-sase-logo" alt="ou sase logo" type="image" />
                 </a> 
             </div>
             <div className="navbar-button">

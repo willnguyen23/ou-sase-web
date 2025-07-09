@@ -4,7 +4,7 @@ import Footer from './UniversalComponents/Footer'
 import MemberInfo from './ExecPage/MemberInfo'
 
 
-ReactDom.createRoot(document.getElementById('root')!).render(
+ReactDom.createRoot(document.getElementById('root1')!).render(
   <>
     <Header />
     

@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import '/src/ExecPage/Exec.css'
-import daniel from "/src/Images/daniel.png"
 
 interface MemberImages {
     id: string;
